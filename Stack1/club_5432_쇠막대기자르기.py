@@ -1,7 +1,7 @@
 import sys; sys.stdin = open('5432_input.txt', 'r')
 
 for TC in range(1, int(input())+1):
-    arr = list(input())
+    arr = input()
     stack = []
     result = 0
     for token in arr:
@@ -13,6 +13,6 @@ for TC in range(1, int(input())+1):
             if last == '(':
                 result += len(stack)
                 last = token
-            elif last == ')':
+            else:
                 result += 1
     print('#{} {}'.format(TC, result))
